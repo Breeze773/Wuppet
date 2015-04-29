@@ -53,7 +53,7 @@ if (!(Test-Path -path $destinationFolder))
 	}
 		Copy-Item -Path $script:path -Destination $destinationFolder
 		Write-Host "Installing Puppet on $_"
-		invoke-command -computername $_ -scriptblock $scriptBlockContent -ArgumentList $script:installer,$service_user,$pw
+		invoke-command -computername $_ -scriptblock $scriptBlockContent -ArgumentList $script:installer,$service_user,$pw,$puppetMaster,$domain
 		Write-Host "Done installing Puppet on $_, now killing any lingering MSIEXEC processes"
 		invoke-command -computername $_ -scriptblock {Stop-Process -name msiexec -Force}
 
