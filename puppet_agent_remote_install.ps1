@@ -14,10 +14,11 @@ $domain = "<some domain>"
 ##Dynamic Variables
 $arch = (get-wmiobject win32_operatingsystem -computer $_ | select-object OSArchitecture).OSArchitecture
 $scriptBlockContent = {param($script:installer,$service_user,$pw) cmd /K msiexec /qn /i $script:installer 
-																						PUPPET_MASTER_SERVER=$puppetMaster
-																						PUPPET_AGENT_ACCOUNT_DOMAIN=$domain
-																						PUPPET_AGENT_ACCOUNT_USER=$service_user
-																						PUPPET_AGENT_ACCOUNT_PASSWORD=$pw}
+					PUPPET_MASTER_SERVER=$puppetMaster
+					PUPPET_AGENT_ACCOUNT_DOMAIN=$domain
+					PUPPET_AGENT_ACCOUNT_USER=$service_user
+					PUPPET_AGENT_ACCOUNT_PASSWORD=$pw
+					}
 
 Write-Host "Beginning Puppet Installation on computers in the computers.txt file"
 function See-PuppetInstalled() {
