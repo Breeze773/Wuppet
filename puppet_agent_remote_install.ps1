@@ -1,6 +1,6 @@
 ##Static Variables
 $64installer = "puppet-enterprise-3.7.2-x64.msi"
-$632installer = "puppet-enterprise-3.7.2.msi"
+$32installer = "puppet-enterprise-3.7.2.msi"
 $destdir = "c:\temp"
 $service_user = "<Some Service User>"
 $computers = get-content .\computers.txt
