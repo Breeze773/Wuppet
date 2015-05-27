@@ -15,3 +15,7 @@ A script to remotely install Puppet agents on windows machines with PowerShell. 
   - $service_user_pw = The password for the above user.  You will be prompted for this at execution time.
   - $puppetMaster    = The DNS name of the puppet master.
   - $domain          = The Active Directory Domain of which the $service_user is a member.
+
+## Usage
+  - Do the relevant prep work above.
+  - `.\puppet_agent_remote_install.ps1`
