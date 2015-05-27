@@ -10,7 +10,7 @@ A script to remotely install Puppet agents on windows machines with PowerShell. 
     - $networkLocation = The location of the Puppet MSI(s).
     - $64installer     = The full filename of the 64bit MSI 
     - $32installer   = The full filename of the 32bit MSI 
-- Optional Variables (When I say optional, I mean optional for the MSI's silent install.  This script as currently written expects to use them.  If not needed you will need to remove them both where they are definted and reference in the script.)
+- Optional Variables (When I say optional, I mean optional for the MSI's silent install.  This script as currently written expects to use them.  If not needed you will need to remove them both where they are definted and referenced in the script.)
   - $service_user    = The user to the Puppet service will run as instead of the default 'Local System'.
   - $service_user_pw = The password for the above user.  You will be prompted for this at execution time.
   - $puppetMaster    = The DNS name of the puppet master.
