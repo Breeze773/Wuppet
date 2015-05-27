@@ -19,3 +19,6 @@ A script to remotely install Puppet agents on windows machines with PowerShell. 
 ## Usage
   - Do the relevant prep work above.
   - `.\puppet_agent_remote_install.ps1`
+
+## Notes
+  - Line 27 `Get-WmiObject` will take some time (especially when being run on machines with lots of applications installed) because it will parse through everything under Installed Programs to find the Puppet installation.
